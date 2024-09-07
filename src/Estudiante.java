@@ -1,32 +1,14 @@
 import java.util.SplittableRandom;
 
-public class Estudiante {
-    private String nombre;
-    private String correo;
+public class Estudiante extends Usuario{
     private String matricula;
-    private String telefono;
     private String semestre;
 
-    public Estudiante(String nombre, String correo) {
-        this.nombre = nombre;
-        this.correo = correo;
+    public Estudiante(String matricula, String semestre) {
+        this.matricula = matricula;
+        this.semestre = semestre;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
 
     public String getMatricula() {
         return matricula;
@@ -36,13 +18,6 @@ public class Estudiante {
         this.matricula = matricula;
     }
 
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
 
     public String getSemestre() {
         return semestre;

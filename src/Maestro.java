@@ -2,46 +2,27 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
-public class Maestro {
+public class Maestro extends Usuario {
     //Atributos
-    private static int ID = 1;
-    int id = 0;
-    private String nombre;
+    private int numPersonal;
     private String especialidad;
 
     //Constructor
-    Maestro(String nombre, String especialidad) {
-        this.nombre = nombre;
+    public Maestro(int numPersonal, String especialidad) {
+        this.numPersonal = numPersonal;
         this.especialidad = especialidad;
-        id = ID++;
-    }
-
-    //Comportamientos
-    public void mostrarNombre(){
-        System.out.println("Nombre: " + this.nombre);
-    }
-
-    public void mostrarID(){
-        System.out.println("ID: " + this.id);
     }
 
     //Getters y Setters
 
-    public int getId() {
-        return id;
+    public int getNumPersonal() {
+        return numPersonal;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setNumPersonal(int numPersonal) {
+        this.numPersonal = numPersonal;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public String getEspecialidad() {
         return especialidad;
