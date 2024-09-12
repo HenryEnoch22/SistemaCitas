@@ -7,14 +7,15 @@ public class Maestro extends Usuario {
     private int numPersonal;
     private String especialidad;
 
+
     //Constructor
-    public Maestro(int numPersonal, String especialidad) {
+    public Maestro(String nombre,String correo, String telefono, int numPersonal, String especialidad) {
+        super(nombre, correo, telefono);
         this.numPersonal = numPersonal;
         this.especialidad = especialidad;
     }
 
     //Getters y Setters
-
     public int getNumPersonal() {
         return numPersonal;
     }
@@ -76,5 +77,10 @@ public class Maestro extends Usuario {
         public void setHora(String hora) {
             this.hora = hora;
         }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Numero de personal: " + this.getNumPersonal() + ", Especialidad: " + this.getEspecialidad();
     }
 }

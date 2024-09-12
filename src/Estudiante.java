@@ -4,7 +4,8 @@ public class Estudiante extends Usuario{
     private String matricula;
     private String semestre;
 
-    public Estudiante(String matricula, String semestre) {
+    public Estudiante(String nombre, String correo, String telefono, String matricula, String semestre) {
+        super(nombre, correo, telefono);
         this.matricula = matricula;
         this.semestre = semestre;
     }

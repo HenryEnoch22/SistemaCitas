@@ -11,7 +11,7 @@ public class ClaseExterna {
         cl.saludar();
     }
 
-    Maestro ejemplo1 = new Maestro(){
+    Maestro ejemplo1 = new Maestro("Tilin", "amorales@gmail.com", "92410215456", 123456, "Ingeniero" ){
         public void saludar(){
             System.out.println("Hola");
         }
