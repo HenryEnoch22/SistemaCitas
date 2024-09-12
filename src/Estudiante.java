@@ -27,4 +27,9 @@ public class Estudiante extends Usuario{
     public void setSemestre(String semestre) {
         this.semestre = semestre;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Matricula: " + matricula + ", Semestre:" + semestre;
+    }
 }

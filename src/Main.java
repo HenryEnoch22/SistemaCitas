@@ -10,7 +10,15 @@ public class Main {
 //        mostrarMenu();
 
         Maestro maestro = new Maestro("Tilin", "amorales@gmail.com", "92410215456", 123456, "Ingeniero" );
+
+        // Agregar tutorias
+        maestro.addTutoriaDisponible(new Date(), "12:00");
+        maestro.addTutoriaDisponible(new Date(), "14:00");
+        maestro.addTutoriaDisponible(new Date(), "16:00");
+
         System.out.println(maestro);
+
+
 
 //        IBoton boton = new IBoton() {
 //            @Override
@@ -22,10 +30,9 @@ public class Main {
 //        boton.pulsar();
 
 
-//        // Agregar tutorias
-//        maestro.addCursoDisponible(new Date(), "12:00");
-//        maestro.addCursoDisponible(new Date(), "14:00");
-//        maestro.addCursoDisponible(new Date(), "16:00");
+
+
+
 
         //Listar tutorias
 //        System.out.println(maestro.getNombre());

@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 
 public class Maestro extends Usuario {
@@ -35,9 +34,10 @@ public class Maestro extends Usuario {
 
     ArrayList<TutoriasDisponibles> tutoriasDisponibles = new ArrayList<>();
 
-    public void addCursoDisponible(Date fecha, String hora){
+    public void addTutoriaDisponible(Date fecha, String hora){
         tutoriasDisponibles.add(new TutoriasDisponibles(fecha, hora));
     }
+
 
     public ArrayList<TutoriasDisponibles> getTutoriasDisponibles() {
         return tutoriasDisponibles;
@@ -77,10 +77,18 @@ public class Maestro extends Usuario {
         public void setHora(String hora) {
             this.hora = hora;
         }
+
+        @Override
+        public String toString() {
+            return "Fecha: " + fecha + ", Hora: " + hora + "\n";
+        }
     }
+
+
+
 
     @Override
     public String toString() {
-        return super.toString() + ", Numero de personal: " + this.getNumPersonal() + ", Especialidad: " + this.getEspecialidad();
+        return super.toString() + ", Numero de personal: " + this.getNumPersonal() + ", Especialidad: " + this.getEspecialidad() + "\nTutorias disponibles: " + tutoriasDisponibles.toString();
     }
 }
