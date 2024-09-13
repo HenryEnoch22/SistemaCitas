@@ -1,22 +1,32 @@
-import com.sun.source.tree.MemberSelectTree;
+import Models.Estudiante;
+import Models.Maestro;
+import static UI.IUMenu.*;
 
 import java.util.Date;
-
-import static UI.IUMenu.*;
 
 public class Main {
     public static void main(String[] args) {
 
-//        mostrarMenu();
+        maestros.add(new Maestro("Luis Morales", "luis@gmail", "125466", 1, "Ing Software"));
+        maestros.add(new Maestro("Javier Pino", "jpino@gmail", "1254566", 2, "Ing Software"));
+        maestros.add(new Maestro("Magdiel", "mamercado@gmail", "12748486", 3, "Ing Software"));
+        maestros.add(new Maestro("Paty", "pmartinez@gmail", "18486", 4, "Ing Software"));
 
-        Maestro maestro = new Maestro("Tilin", "amorales@gmail.com", "92410215456", 123456, "Ingeniero" );
+        estudiantes.add(new Estudiante("Ricardo Landa", "tilininsano@gmail", "851666", "12254", "Quinto"));
+        estudiantes.add(new Estudiante("Alexis Nava Moya", "amoyao@gmail", "851666", "12255", "Quinto"));
 
-        // Agregar tutorias
-        maestro.addTutoriaDisponible(new Date(), "12:00");
-        maestro.addTutoriaDisponible(new Date(), "14:00");
-        maestro.addTutoriaDisponible(new Date(), "16:00");
+        mostrarMenu();
 
-        System.out.println(maestro);
+
+
+//        Maestro maestro = new Maestro("Tilin", "amorales@gmail.com", "92410215456", 123456, "Ingeniero" );
+//
+//        // Agregar tutorias
+//        maestro.addTutoriaDisponible(new Date(), "12:00");
+//        maestro.addTutoriaDisponible(new Date(), "14:00");
+//        maestro.addTutoriaDisponible(new Date(), "16:00");
+//
+//        System.out.println(maestro);
 
 
 
@@ -37,11 +47,11 @@ public class Main {
         //Listar tutorias
 //        System.out.println(maestro.getNombre());
 //        System.out.println("Cursos disponibles: ");
-//        for(Maestro.TutoriasDisponibles td : maestro.getTutoriasDisponibles()){
+//        for(Models.Maestro.TutoriasDisponibles td : maestro.getTutoriasDisponibles()){
 //            System.out.println(td.getFecha() + " " + td.getHora());
 //        }
 
-//        ClaseExterna ce = new ClaseExterna();
+//        Models.ClaseExterna ce = new Models.ClaseExterna();
 //        ce.metodoExtero();
 
     }

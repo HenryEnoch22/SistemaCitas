@@ -1,6 +1,6 @@
-import java.util.SplittableRandom;
+package Models;
 
-public class Estudiante extends Usuario{
+public class Estudiante extends Usuario {
     private String matricula;
     private String semestre;
 

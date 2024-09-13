@@ -1,3 +1,5 @@
+package Models;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -23,7 +25,6 @@ public class Maestro extends Usuario {
         this.numPersonal = numPersonal;
     }
 
-
     public String getEspecialidad() {
         return especialidad;
     }
@@ -31,6 +32,8 @@ public class Maestro extends Usuario {
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
+
+
 
     ArrayList<TutoriasDisponibles> tutoriasDisponibles = new ArrayList<>();
 
@@ -43,45 +46,51 @@ public class Maestro extends Usuario {
         return tutoriasDisponibles;
     }
 
-    public static class TutoriasDisponibles{
-        private int id;
-        private Date fecha;
-        private String hora;
+    //CLASE ANIDADA
+    public static class TutoriasDisponibles extends CitaTutoria{
 
-
-        TutoriasDisponibles(Date fecha, String hora) {
-            this.fecha = fecha;
-            this.hora = hora;
+        public TutoriasDisponibles(Date fecha, String hora){
+            super(fecha, hora);
         }
 
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public Date getFecha() {
-            return fecha;
-        }
-
-        public void setFecha(Date fecha) {
-            this.fecha = fecha;
-        }
-
-        public String getHora() {
-            return hora;
-        }
-
-        public void setHora(String hora) {
-            this.hora = hora;
-        }
-
-        @Override
-        public String toString() {
-            return "Fecha: " + fecha + ", Hora: " + hora + "\n";
-        }
+//        private int id;
+//        private Date fecha;
+//        private String hora;
+//
+//
+//        TutoriasDisponibles(Date fecha, String hora) {
+//            this.fecha = fecha;
+//            this.hora = hora;
+//        }
+//
+//        public int getId() {
+//            return id;
+//        }
+//
+//        public void setId(int id) {
+//            this.id = id;
+//        }
+//
+//        public Date getFecha() {
+//            return fecha;
+//        }
+//
+//        public void setFecha(Date fecha) {
+//            this.fecha = fecha;
+//        }
+//
+//        public String getHora() {
+//            return hora;
+//        }
+//
+//        public void setHora(String hora) {
+//            this.hora = hora;
+//        }
+//
+//        @Override
+//        public String toString() {
+//            return "Fecha: " + fecha + ", Hora: " + hora + "\n";
+//        }
     }
 
 

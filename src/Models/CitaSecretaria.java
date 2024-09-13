@@ -1,7 +1,8 @@
-import java.io.Serializable;
+package Models;
+
 import java.util.Date;
 
-public class CitaSecretaria implements IAgendable{
+public class CitaSecretaria implements IAgendable {
     private int id;
     private Secretaria secretaria;
     private Estudiante estudiante;
@@ -49,6 +50,8 @@ public class CitaSecretaria implements IAgendable{
     public void setHora(String hora) {
         this.hora = hora;
     }
+
+
 
     @Override
     public void agendar(Date fecha, String hora) {

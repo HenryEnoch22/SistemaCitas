@@ -1,6 +1,8 @@
+package Models;
+
 import java.util.Date;
 
-public class CitaMaestro implements IAgendable{
+public class CitaMaestro implements IAgendable {
     private int id;
     private Maestro maestro;
     private Estudiante estudiante;
