@@ -14,6 +14,9 @@ public class IUMenu {
     public static ArrayList<Maestro> maestros = new ArrayList<>();
     public static ArrayList<Estudiante> estudiantes = new ArrayList<>();
     public static ArrayList<Secretaria> secretarias = new ArrayList<>();
+    public static Maestro maestroLogeado;
+    public static Estudiante estudianteLogeado;
+    public static Secretaria secretariaLogeado;
 
     public final static String [] MESES = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
 
@@ -25,6 +28,7 @@ public class IUMenu {
             System.out.println("Selecciona una opción.");
             System.out.println("1. Maestros");
             System.out.println("2. Estudiantes");
+            System.out.println("3. Secretarias");
             System.out.println("0. Salir");
 
             Scanner in = new Scanner(System.in);
@@ -43,6 +47,7 @@ public class IUMenu {
                 case 3:
                     loginUsuario(3);
                     System.out.println("..:: Menú Secretaria ::..");
+                    secretariaMenu();
 
                 case 0:
                     System.out.println("Saliendo del programa");
@@ -58,18 +63,45 @@ public class IUMenu {
         // 1 maestro
         // 2 Estudiante
         // 3 Secretaria
-        System.out.println("Ingresa tu correo");
-        Scanner in = new Scanner(System.in);
-        String correo = in.nextLine();
+        boolean bandera = true;
+        do{
+            System.out.println("Ingresa tu correo");
+            Scanner in = new Scanner(System.in);
+            String correo = in.nextLine();
 
-        if(tipoUsuario == 1){
-            for(Maestro maestro : maestros){
-                if(maestro.getCorreo().equals(correo)){
-                    System.out.println("Hola maestro: " + maestro.getNombre());
-                    maestroMenu();
+            if(tipoUsuario == 1){
+                for(Maestro maestro : maestros){
+                    if(maestro.getCorreo().equals(correo)){
+                        System.out.println("Hola maestro: " + maestro.getNombre());
+                        maestroMenu();
+                        maestroLogeado = maestro;
+                        bandera = false;
+                    }
                 }
             }
-        }
+            if (tipoUsuario == 2){
+                for(Estudiante estudiante : estudiantes){
+                    if(estudiante.getCorreo().equals(correo)){
+                        System.out.println("Hola estudiante: " + estudiante.getNombre());
+                        estudianteMenu();
+                        estudianteLogeado = estudiante;
+                        bandera = false;
+                    }
+                }
+            }
+
+            if(tipoUsuario == 3){
+                for(Secretaria secretaria : secretarias){
+                    if(secretaria.getCorreo().equals(correo)){
+                        System.out.println("Hola secretaria: " + secretaria.getNombre());
+                        secretariaLogeado = secretaria;
+                        bandera = false;
+
+                    }
+                }
+            }
+        }while(true);
+
 
     }
 
