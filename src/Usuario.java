@@ -9,6 +9,11 @@ public class Usuario {
         this.telefono = telefono;
     }
 
+    public Usuario(String nombre, String correo) {
+        this.nombre = nombre;
+        this.correo = correo;
+    }
+
     @Override
     public String toString() {
         return "Nombre: " + nombre + ", correo: " + correo ;
