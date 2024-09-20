@@ -38,7 +38,7 @@ public class CitaTutoria {
         return formato.format(fecha);
     }
 
-    public Date getFecha(Date fecha) {
+    public Date getFechaDate() {
         return fecha;
     }
 

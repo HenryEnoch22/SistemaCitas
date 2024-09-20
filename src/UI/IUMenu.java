@@ -42,12 +42,11 @@ public class IUMenu {
                 case 2:
                     loginUsuario(2);
                     System.out.println("..:: Menú Estudiantes::..");
-                    estudianteMenu();
                     break;
                 case 3:
                     loginUsuario(3);
                     System.out.println("..:: Menú Secretaria ::..");
-                    secretariaMenu();
+//                    secretariaMenu();
 
                 case 0:
                     System.out.println("Saliendo del programa");
@@ -83,8 +82,8 @@ public class IUMenu {
                 for(Estudiante estudiante : estudiantes){
                     if(estudiante.getCorreo().equals(correo)){
                         System.out.println("Hola estudiante: " + estudiante.getNombre());
-                        estudianteLogeado = estudiante;
                         bandera = false;
+                        estudianteLogeado = estudiante;
                         estudianteMenu();
                     }
                 }

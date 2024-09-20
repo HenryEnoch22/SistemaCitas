@@ -91,7 +91,7 @@ public class UIMaestro {
             System.out.println(j +  ". " + maestroLogeado.getTutoriasDisponibles().get(i).getFecha() + " " + maestroLogeado.getTutoriasDisponibles().get(i).getHora());
             j++;
         }
-        System.out.println(" ");
+        System.out.println();
     }
 
 
