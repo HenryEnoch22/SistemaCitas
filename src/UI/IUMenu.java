@@ -73,9 +73,9 @@ public class IUMenu {
                 for(Maestro maestro : maestros){
                     if(maestro.getCorreo().equals(correo)){
                         System.out.println("Hola maestro: " + maestro.getNombre());
-                        maestroMenu();
-                        maestroLogeado = maestro;
                         bandera = false;
+                        maestroLogeado = maestro;
+                        maestroMenu();
                     }
                 }
             }
@@ -83,20 +83,18 @@ public class IUMenu {
                 for(Estudiante estudiante : estudiantes){
                     if(estudiante.getCorreo().equals(correo)){
                         System.out.println("Hola estudiante: " + estudiante.getNombre());
-                        estudianteMenu();
                         estudianteLogeado = estudiante;
                         bandera = false;
+                        estudianteMenu();
                     }
                 }
             }
-
             if(tipoUsuario == 3){
                 for(Secretaria secretaria : secretarias){
                     if(secretaria.getCorreo().equals(correo)){
                         System.out.println("Hola secretaria: " + secretaria.getNombre());
-                        secretariaLogeado = secretaria;
                         bandera = false;
-
+                        secretariaLogeado = secretaria;
                     }
                 }
             }

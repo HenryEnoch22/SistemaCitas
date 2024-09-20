@@ -32,7 +32,7 @@ public class Secretaria extends Usuario {
 
     ArrayList<Secretaria.TutoriasDisponibles> tutoriasDisponibles = new ArrayList<>();
 
-    public void addTutoriaDisponible(Date fecha, String hora) {
+    public void addTutoriaDisponible(String fecha, String hora) {
         tutoriasDisponibles.add(new Secretaria.TutoriasDisponibles(fecha, hora));
     }
 
@@ -43,7 +43,7 @@ public class Secretaria extends Usuario {
     //CLASE ANIDADA
     public static class TutoriasDisponibles extends CitaTutoria {
 
-        public TutoriasDisponibles(Date fecha, String hora) {
+        public TutoriasDisponibles(String fecha, String hora) {
             super(fecha, hora);
         }
 

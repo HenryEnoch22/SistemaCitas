@@ -1,5 +1,7 @@
 package UI;
 
+import Models.Maestro;
+
 import java.util.Scanner;
 
 public class UIEstudiante {
@@ -19,19 +21,33 @@ public class UIEstudiante {
 
             switch(respuesta){
                 case 1:
-                    System.out.println("..:: Agendar tutoria ::..");
-                    System.out.println("Selecciona una opcion.");
-                    for(int i = 1; i <= MESES.length; i++){
-                        System.out.println(i + ". " + MESES[i-1]);
-                    }
+                    agendarTutoria();
                     break;
                 case 2:
-                    System.out.println("..:: Mis tutorias ::.."); break;
+                    listarTutorias();
+                    break;
                 case 0:
                     System.out.println("Saliendo..."); break;
                 default:
                     System.out.println("Por favor ingrese una opción valida.");
             }
         }while(respuesta != 0);
+    }
+
+    private static void agendarTutoria() {
+        System.out.println("..:: Agendar tutoria ::..");
+        //1. Maestro 1
+        //1. Tutoria 1
+        //2. Tutoria 2
+        //2. Maestro
+        //1. Tutoria 1
+        //3. Maestro
+        //1. Tutorias 1
+
+
+    }
+
+    private static void listarTutorias() {
+        System.out.println("..:: Mis tutorias ::..");
     }
 }

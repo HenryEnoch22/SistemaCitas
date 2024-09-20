@@ -1,5 +1,7 @@
 import Models.Estudiante;
 import Models.Maestro;
+import UI.UIMaestro;
+
 import static UI.IUMenu.*;
 
 import java.util.Date;
@@ -17,6 +19,7 @@ public class Main {
 
         mostrarMenu();
 
+//        UIMaestro.agregarTutoria();
 
 
 //        Maestro maestro = new Maestro("Tilin", "amorales@gmail.com", "92410215456", 123456, "Ingeniero" );
